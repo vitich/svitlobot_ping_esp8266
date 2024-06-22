@@ -32,7 +32,7 @@ void setup() {
   }
 
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP("YOUR_SSID", "YOUR_PASSWORD");
+  WiFiMulti.addAP("YOUR_WIFI_SSID", "YOUR_WIFI_PASSWORD");
   pinMode(LED_BUILTIN, OUTPUT);  // Initialize the LED_BUILTIN pin as an output
 
 }
@@ -46,7 +46,7 @@ void loop() {
     HTTPClient http;
 
     Serial.print("[HTTP] begin...\n");
-    if (http.begin(client, "http://api.svitlobot.in.ua/channelPing?channel_key=YOUR_TOKEN")) {  // HTTP
+    if (http.begin(client, "http://api.svitlobot.in.ua/channelPing?channel_key=YOUR_SVITLOBOT_TOKEN")) {  // HTTP
 
 
       Serial.print("[HTTP] GET...\n");
@@ -80,7 +80,7 @@ void loop() {
     HTTPClient http;
 
     Serial.print("[HTTP] begin...\n");
-    if (http.begin(client, "http://hc-ping.com/YOUR_HEALTHCHECK_TOKEN")) {  // HTTP
+    if (http.begin(client, "http://hc-ping.com/YOUR_HEALTHCHECKS.IO_TOKEN")) {  // HTTP
 
 
       Serial.print("[HTTP] GET...\n");
